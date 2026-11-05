@@ -1,788 +1,519 @@
+
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gratitude Consulting Indonesia</title>
-
-<meta name="description"
-content="Gratitude Consulting Indonesia — Human & Organizational Development Consulting. Developing People. Strengthening Organizations.">
-
-<style>
-
-:root {
-  --green: #173d30;
-  --green-light: #28583f;
-  --cream: #f7f4ec;
-  --cream-dark: #eae6d9;
-  --gold: #c9ad68;
-  --text: #26362f;
-  --muted: #68736d;
-  --white: #ffffff;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  background: var(--cream);
-  line-height: 1.7;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* NAVIGATION */
-
-header {
-  background: var(--green);
-  color: var(--white);
-  padding: 24px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 15px;
-  letter-spacing: 2px;
-  font-weight: 700;
-}
-
-nav a {
-  font-size: 12px;
-  margin-left: 24px;
-  color: #e8e3d6;
-}
-
-nav a:hover {
-  color: var(--gold);
-}
-
-/* HERO */
-
-.hero {
-  background: var(--green);
-  color: var(--white);
-  min-height: 82vh;
-  padding: 100px 7% 120px;
-  display: flex;
-  align-items: center;
-}
-
-.hero-content {
-  max-width: 900px;
-}
-
-.eyebrow {
-  color: var(--gold);
-  font-size: 11px;
-  letter-spacing: 3px;
-  font-weight: bold;
-  margin-bottom: 24px;
-}
-
-.hero h1 {
-  font-size: clamp(42px, 7vw, 76px);
-  line-height: 1.08;
-  font-weight: 600;
-  letter-spacing: -2px;
-  margin-bottom: 28px;
-}
-
-.hero-subtitle {
-  font-size: 18px;
-  color: #dddcd1;
-  max-width: 650px;
-  margin-bottom: 35px;
-}
-
-.founder-line {
-  border-left: 2px solid var(--gold);
-  padding-left: 18px;
-  color: #cfd4cd;
-  font-size: 13px;
-}
-
-/* GENERAL */
-
-section {
-  padding: 100px 7%;
-}
-
-.section-inner {
-  max-width: 1100px;
-  margin: auto;
-}
-
-.section-label {
-  color: var(--gold);
-  font-size: 11px;
-  letter-spacing: 3px;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
-
-h2 {
-  font-size: clamp(30px, 5vw, 48px);
-  line-height: 1.15;
-  color: var(--green);
-  margin-bottom: 28px;
-  font-weight: 600;
-}
-
-.lead {
-  font-size: 19px;
-  max-width: 760px;
-  color: var(--muted);
-}
-
-/* ABOUT */
-
-.about {
-  background: var(--cream);
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
-  margin-top: 45px;
-}
-
-.about-grid p {
-  color: var(--muted);
-}
-
-/* SERVICES */
-
-.services {
-  background: var(--white);
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 50px;
-}
-
-.service {
-  border-top: 2px solid var(--green);
-  padding-top: 24px;
-}
-
-.service-number {
-  color: var(--gold);
-  font-size: 13px;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-}
-
-.service h3 {
-  color: var(--green);
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-
-.service p {
-  color: var(--muted);
-  font-size: 15px;
-}
-
-/* APPROACH */
-
-.approach {
-  background: var(--green);
-  color: var(--white);
-}
-
-.approach h2 {
-  color: var(--white);
-}
-
-.approach .lead {
-  color: #d7ddd8;
-}
-
-.architecture {
-  margin-top: 55px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 8px;
-}
-
-.architecture div {
-  padding: 20px 10px;
-  border: 1px solid rgba(255,255,255,.2);
-  text-align: center;
-  font-size: 13px;
-  color: #e8e7dd;
-}
-
-.architecture span {
-  display: block;
-  color: var(--gold);
-  font-size: 10px;
-  letter-spacing: 2px;
-  margin-bottom: 8px;
-}
-
-/* WHY */
-
-.why {
-  background: var(--cream-dark);
-}
-
-.why-list {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px;
-}
-
-.why-item {
-  border-left: 3px solid var(--gold);
-  padding-left: 20px;
-}
-
-.why-item h3 {
-  color: var(--green);
-  margin-bottom: 8px;
-}
-
-.why-item p {
-  color: var(--muted);
-}
-
-/* FOUNDER */
-
-.founder {
-  background: var(--white);
-}
-
-.founder-card {
-  margin-top: 40px;
-  max-width: 800px;
-  border-top: 1px solid #d7d3c7;
-  padding-top: 35px;
-}
-
-.founder-card h3 {
-  font-size: 30px;
-  color: var(--green);
-  margin-bottom: 8px;
-}
-
-.credentials {
-  color: var(--gold);
-  font-size: 13px;
-  margin-bottom: 22px;
-}
-
-.founder-card p {
-  color: var(--muted);
-  max-width: 720px;
-}
-
-/* CONTACT */
-
-.contact {
-  background: var(--green);
-  color: var(--white);
-  text-align: center;
-}
-
-.contact h2 {
-  color: var(--white);
-}
-
-.contact p {
-  color: #d6ddd8;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 13px 28px;
-  background: var(--gold);
-  color: var(--green);
-  font-weight: bold;
-  font-size: 13px;
-  letter-spacing: .5px;
-}
-
-.button:hover {
-  opacity: .9;
-}
-
-/* FOOTER */
-
-footer {
-  background: #102b22;
-  color: #aeb7b0;
-  text-align: center;
-  padding: 25px;
-  font-size: 11px;
-  letter-spacing: .5px;
-}
-
-/* MOBILE */
-
-@media (max-width: 800px) {
-
-  header {
-    display: block;
-  }
-
-  nav {
-    margin-top: 15px;
-  }
-
-  nav a {
-    margin-left: 0;
-    margin-right: 18px;
-  }
-
-  .hero {
-    min-height: auto;
-    padding: 80px 7% 90px;
-  }
-
-  .hero h1 {
-    font-size: 46px;
-  }
-
-  .hero-subtitle {
-    font-size: 16px;
-  }
-
-  section {
-    padding: 75px 7%;
-  }
-
-  .about-grid,
-  .services-grid,
-  .why-list {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .architecture {
-    grid-template-columns: 1fr;
-  }
-
-  .architecture div {
-    text-align: left;
-  }
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gratitude Consulting Indonesia - Konsultan pengembangan manusia, organisasi, dan perusahaan.">
+  <title>Gratitude Consulting Indonesia | GCI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #153D32;
+      --green-light: #245746;
+      --cream: #F7F3E9;
+      --gold: #C9A45C;
+      --dark: #26332D;
+      --muted: #68756E;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: var(--green);
+      color: var(--white);
+      padding: 22px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #F5EBD8;
+      font-size: 13px;
+    }
+
+    .hero {
+      background: var(--green);
+      color: var(--white);
+      padding: 110px 0 120px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: clamp(34px, 6vw, 58px);
+      max-width: 850px;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 690px;
+      color: #E5E9E4;
+      font-size: 16px;
+    }
+
+    .hero-line {
+      width: 65px;
+      height: 3px;
+      background: var(--gold);
+      margin: 30px 0;
+    }
+
+    .hero .founder {
+      font-size: 13px;
+      color: #D7DFD8;
+    }
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-label {
+      color: #9A793D;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      color: var(--green);
+      font-size: clamp(27px, 4vw, 38px);
+      margin-bottom: 22px;
+    }
+
+    .intro {
+      max-width: 760px;
+      color: var(--muted);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 12px;
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .service-number {
+      color: var(--gold);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      color: var(--green);
+      font-size: 19px;
+      margin-bottom: 15px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .approach {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .approach h2 {
+      color: var(--white);
+    }
+
+    .approach .intro {
+      color: #DCE5DE;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 45px;
+    }
+
+    .flow-item {
+      text-align: center;
+      background: var(--green-light);
+      padding: 25px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .flow-item span {
+      display: block;
+      color: var(--gold);
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .flow-item strong {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .principle {
+      padding: 22px 0;
+      border-bottom: 1px solid #D9D5CA;
+    }
+
+    .principle h3 {
+      color: var(--green);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .principle p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .founder-section {
+      background: #EEE9DC;
+    }
+
+    .founder-name {
+      font-size: 30px;
+      color: var(--green);
+      margin-bottom: 5px;
+    }
+
+    .founder-role {
+      color: #9A793D;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .founder-description {
+      max-width: 720px;
+      color: var(--muted);
+    }
+
+    .contact {
+      background: var(--green);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: var(--white);
+    }
+
+    .contact p {
+      color: #E0E7E0;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: #173B30;
+      padding: 13px 27px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #102D25;
+      color: #DCE5DE;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 12px;
+    }
+
+    footer p + p {
+      margin-top: 5px;
+      color: var(--gold);
+    }
+
+    @media (max-width: 800px) {
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .flow {
+        grid-template-columns: 1fr;
+      }
+
+      .principles {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .hero {
+        padding: 75px 0 85px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
 <header>
-
-<div class="logo">
-GRATITUDE CONSULTING INDONESIA
-</div>
-
-<nav>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#approach">Approach</a>
-<a href="#founder">Founder</a>
-<a href="#contact">Contact</a>
-</nav>
-
+  <div class="container nav">
+    <div class="brand">GRATITUDE CONSULTING INDONESIA</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#founder">Founder</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="hero-content">
-
-<div class="eyebrow">
-HUMAN & ORGANIZATIONAL DEVELOPMENT
-</div>
-
-<h1>
-Developing People.<br>
-Strengthening Organizations.
-</h1>
-
-<p class="hero-subtitle">
-We help people and organizations develop awareness,
-strengthen capability, improve performance,
-and create meaningful impact.
-</p>
-
-<div class="founder-line">
-Founded by <strong>Paulus Tri Wahyudi</strong><br>
-Founder & Principal Consultant
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-<div class="section-inner">
-
-<div class="section-label">
-ABOUT GCI
-</div>
-
-<h2>
-Development begins<br>
-with awareness.
-</h2>
-
-<p class="lead">
-Gratitude Consulting Indonesia is a human and organizational
-development consulting practice focused on connecting people,
-process, action, and performance.
-</p>
-
-<div class="about-grid">
-
-<p>
-We believe meaningful development is not simply about
-adding knowledge or motivation. Sustainable change requires
-awareness, understanding of the self, intentional action,
-and continuous feedback.
-</p>
-
-<p>
-Gratitude is part of our distinctive approach:
-not as a solution to every problem, but as a practice
-that can enable awareness and create space for better
-choices and actions.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section class="services" id="services">
-
-<div class="section-inner">
-
-<div class="section-label">
-WHAT WE DO
-</div>
-
-<h2>
-Three connected<br>
-areas of development.
-</h2>
-
-<div class="services-grid">
-
-<div class="service">
-
-<div class="service-number">
-01 — HUMAN
-</div>
-
-<h3>
-Human Development
-</h3>
-
-<p>
-Developing awareness, self-image, human capability,
-personal growth, and the capacity to make intentional choices.
-</p>
-
-</div>
-
-
-<div class="service">
-
-<div class="service-number">
-02 — PERFORMANCE
-</div>
-
-<h3>
-Performance Development
-</h3>
-
-<p>
-Connecting capability with action, execution,
-performance, accountability, and meaningful results.
-</p>
-
-</div>
-
-
-<div class="service">
-
-<div class="service-number">
-03 — ORGANIZATION
-</div>
-
-<h3>
-Organization Development
-</h3>
-
-<p>
-Supporting organizations in strengthening strategy,
-process, capability, alignment, and effectiveness.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- APPROACH -->
-
-<section class="approach" id="approach">
-
-<div class="section-inner">
-
-<div class="section-label">
-OUR APPROACH
-</div>
-
-<h2>
-Gratitude as an<br>
-awareness-enabling practice.
-</h2>
-
-<p class="lead">
-Our development architecture connects inner awareness
-with intentional action and continuous learning.
-</p>
-
-<div class="architecture">
-
-<div>
-<span>01</span>
-GRATITUDE
-</div>
-
-<div>
-<span>02</span>
-AWARENESS
-</div>
-
-<div>
-<span>03</span>
-SELF-IMAGE
-</div>
-
-<div>
-<span>04</span>
-ACTION
-</div>
-
-<div>
-<span>05</span>
-FEEDBACK
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- WHY GCI -->
-
-<section class="why">
-
-<div class="section-inner">
-
-<div class="section-label">
-WHY GCI
-</div>
-
-<h2>
-Beyond training.
-<br>
-Toward development.
-</h2>
-
-<div class="why-list">
-
-<div class="why-item">
-
-<h3>
-Human-centered
-</h3>
-
-<p>
-We start by understanding the human condition
-before deciding what intervention is required.
-</p>
-
-</div>
-
-<div class="why-item">
-
-<h3>
-Diagnostic thinking
-</h3>
-
-<p>
-We distinguish symptoms, conditions, hypotheses,
-and root causes before designing development solutions.
-</p>
-
-</div>
-
-<div class="why-item">
-
-<h3>
-Integrated perspective
-</h3>
-
-<p>
-People, process, action, and performance are viewed
-as connected rather than isolated problems.
-</p>
-
-</div>
-
-<div class="why-item">
-
-<h3>
-Practical development
-</h3>
-
-<p>
-Insight becomes valuable when it can translate into
-better decisions, actions, and measurable progress.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOUNDER -->
-
-<section class="founder" id="founder">
-
-<div class="section-inner">
-
-<div class="section-label">
-FOUNDER & PRINCIPAL CONSULTANT
-</div>
-
-<h2>
-Paulus Tri Wahyudi
-</h2>
-
-<div class="founder-card">
-
-<h3>
-Paulus Tri Wahyudi
-</h3>
-
-<div class="credentials">
-S.Pd. · CHt. · MP-NNLP · Bars Practitioner
-</div>
-
-<p>
-Human development practitioner, gratitude practitioner,
-facilitator, and community ecosystem developer with
-extensive experience in learning, facilitation, personal
-development, and community-based development.
-</p>
-
-<br>
-
-<p>
-Through Gratitude Consulting Indonesia, his work focuses
-on connecting gratitude, awareness, human development,
-performance, and organizational development.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<div class="section-inner">
-
-<div class="section-label">
-LET'S CONNECT
-</div>
-
-<h2>
-Let's build meaningful<br>
-growth together.
-</h2>
-
-<p>
-Discuss a development need, collaboration,
-or organizational challenge with GCI.
-</p>
-
-<a class="button"
-href="https://wa.me/6289638962843"
-target="_blank">
-CONTACT VIA WHATSAPP
-</a>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Human • Organization • Corporate</div>
+      <h1>Developing People. Strengthening Organizations. Advancing Businesses.</h1>
+      <p>
+        Kami mendampingi manusia, organisasi, dan perusahaan untuk
+        mengembangkan kapasitas, meningkatkan kinerja, serta menciptakan
+        pertumbuhan yang bermakna.
+      </p>
+      <div class="hero-line"></div>
+      <p class="founder">Paulus Tri Wahyudi | Founder &amp; Principal Consultant</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-label">Who We Are</div>
+      <h2>Development Begins with Awareness.</h2>
+      <p class="intro">
+        Gratitude Consulting Indonesia adalah konsultan pengembangan manusia,
+        organisasi, dan perusahaan. Kami melihat pengembangan sebagai proses
+        terintegrasi yang menghubungkan manusia, sistem, proses, tindakan,
+        dan hasil. Kami membantu klien memahami kondisi aktual sebelum
+        menentukan arah pengembangan yang tepat.
+      </p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-label">What We Do</div>
+      <h2>Our Services</h2>
+      <p class="intro">
+        Tiga area pengembangan yang saling terhubung untuk mendukung
+        pertumbuhan individu, organisasi, dan perusahaan.
+      </p>
+
+      <div class="services">
+        <div class="service-card">
+          <div class="service-number">01</div>
+          <h3>Human Development</h3>
+          <p>
+            Mengembangkan kesadaran, citra diri, kapasitas, dan potensi manusia
+            agar mampu mengambil keputusan dan bertindak secara lebih efektif.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">02</div>
+          <h3>Organization Development</h3>
+          <p>
+            Memperkuat kepemimpinan, budaya, kolaborasi, struktur,
+            dan efektivitas organisasi untuk mendukung pencapaian tujuan bersama.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">03</div>
+          <h3>Corporate Development</h3>
+          <p>
+            Mendukung pengembangan perusahaan melalui strategi, sistem,
+            proses bisnis, kapasitas organisasi, dan peningkatan kinerja.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="approach" id="approach">
+    <div class="container">
+      <div class="section-label">How We Work</div>
+      <h2>Our Approach</h2>
+      <p class="intro">
+        Gratitude as an Awareness-Enabling Practice.
+        Bersyukur menjadi praktik yang membantu membuka kesadaran.
+        Kesadaran mendukung pemahaman terhadap diri, yang kemudian dapat
+        diterjemahkan menjadi tindakan dan proses pembelajaran melalui umpan balik.
+      </p>
+
+      <div class="flow">
+        <div class="flow-item">
+          <span>01</span>
+          <strong>Gratitude</strong>
+        </div>
+        <div class="flow-item">
+          <span>02</span>
+          <strong>Awareness</strong>
+        </div>
+        <div class="flow-item">
+          <span>03</span>
+          <strong>Self-Image</strong>
+        </div>
+        <div class="flow-item">
+          <span>04</span>
+          <strong>Action</strong>
+        </div>
+        <div class="flow-item">
+          <span>05</span>
+          <strong>Feedback</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="principles">
+    <div class="container">
+      <div class="section-label">Our Principles</div>
+      <h2>What Guides Our Work</h2>
+
+      <div class="principles">
+        <div class="principle">
+          <h3>Human-Centered</h3>
+          <p>Memahami manusia sebagai bagian penting dari setiap proses pengembangan.</p>
+        </div>
+
+        <div class="principle">
+          <h3>Diagnosis-Based</h3>
+          <p>Memahami kondisi aktual sebelum menentukan solusi dan intervensi.</p>
+        </div>
+
+        <div class="principle">
+          <h3>Integrated Perspective</h3>
+          <p>Menghubungkan manusia, proses, tindakan, dan hasil dalam satu perspektif.</p>
+        </div>
+
+        <div class="principle">
+          <h3>Practical Development</h3>
+          <p>Mendorong pengembangan yang dapat diterapkan, diamati, dan dievaluasi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder-section" id="founder">
+    <div class="container">
+      <div class="section-label">The Founder</div>
+      <h2>Leadership &amp; Experience</h2>
+      <div class="founder-name">Paulus Tri Wahyudi</div>
+      <div class="founder-role">Founder &amp; Principal Consultant</div>
+      <p class="founder-description">
+        Praktisi pengembangan manusia, pengembang pendekatan gratitude,
+        fasilitator, dan pengembang ekosistem komunitas. Berpengalaman dalam
+        pembelajaran, fasilitasi, pengembangan diri, dan pendampingan komunitas.
+      </p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-label">Contact &amp; Collaboration</div>
+      <h2>Let's Build Meaningful Growth.</h2>
+      <p>
+        Mari membangun pertumbuhan yang bermakna bersama
+        Gratitude Consulting Indonesia.
+      </p>
+      <a class="button" href="https://wa.me/6289638962843" target="_blank" rel="noopener">
+        Connect via WhatsApp
+      </a>
+    </div>
+  </section>
+
+</main>
 
 <footer>
-
-© 2026 Gratitude Consulting Indonesia
-
-<br><br>
-
-Bersyukur • Bertumbuh • Berdampak
-
+  <p>© 2026 Gratitude Consulting Indonesia. All Rights Reserved.</p>
+  <p>Bersyukur • Bertumbuh • Berdampak</p>
 </footer>
 
 </body>
